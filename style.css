@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("pchero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+}
+
+.site-logo {
+  display: block;
+  width: min(220px, 60vw);
+  height: auto;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+}
+
+.signup-box {
+  width: min(100%, 460px);
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.signup-input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 999px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.signup-button {
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.instagram-link:hover {
+  opacity: 0.85;
+  transform: scale(1.04);
+}
+
+.instagram-icon {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("mobilehero.png");
+  }
+
+  .site-header {
+    padding: 20px 16px;
+  }
+
+  .site-logo {
+    width: min(180px, 65vw);
+  }
+
+  .hero-content {
+    padding: 20px 16px;
+  }
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  .signup-button {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding: 16px;
+    font-size: 0.85rem;
+  }
+}
